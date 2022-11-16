@@ -10,8 +10,8 @@ public class TestaListagem {
         Connection connection = connectionFactory.recuperaConexao();
         System.out.println("Fechando conexão! !");
 
-        Statement statement = connection.createStatement();
-        statement.execute("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
+        PreparedStatement statement = connection.prepareStatement("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
+        statement.execute();
 
         ResultSet resultSet = statement.getResultSet();
         while (resultSet.next()){
