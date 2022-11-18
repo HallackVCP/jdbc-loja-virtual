@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Tests;
 
 import org.example.dao.ProdutoDAO;
 import org.example.factory.ConnectionFactory;
